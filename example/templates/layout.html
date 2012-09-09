@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="{{ url_for('static',filename='img/favicon.ico') }}">
+
+        <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet/less" href="{{ url_for('static',filename='bootstrap/less/custom.less') }}" />
+
+        <script src="{{ url_for('static',filename='jquery-1.7.2.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='less-1.1.5.min.js') }}"></script>
+        <script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    </head>
+
+    <body>
+        <article>
+        <nav class="navbar">
+            <div class="navbar-inner">
+            <div class="container">
+                <a href="/" class="brand">
+                    <strong>Flask</strong>
+                </a>
+                <div class="nav-collapse">
+                    <ul class="nav actions">
+                        <li><a href="">Home</a></li>
+                    </ul>
+                    <ul class="nav actions" style="border-left:none">
+                        <li><a href="">Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+
+        <section class="container">
+            {% block content %}{% endblock %}
+        </section>
+
+        <hr>
+
+        <footer class="container">
+            <div>
+                <span>example © 2012</span>
+                <ul class="inline">
+                    <li><a href="">About</a><li>
+                </ul>
+            </div>
+         </footer>
+
+        </article>
+    </body>
+</html>

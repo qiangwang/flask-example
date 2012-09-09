@@ -1,0 +1,7 @@
+{% macro error(msg, class='') %}
+    {% if msg %}
+    <span class="{{ class }} help-inline label label-important">
+        {{ msg[0] }}
+    </span>
+    {% endif %}
+{% endmacro %}
